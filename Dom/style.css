@@ -1,0 +1,60 @@
+:root{
+    background-color: var(--radio-color);
+    /* background-color: pink;  */
+}
+.form-control{
+    margin: 50px;
+    background-color: aliceblue;
+    width: fit-content;
+    color: black;
+}
+.color-changer{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    width: fit-content;
+    margin-inline: auto;
+}
+input[type='radio']{
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 2px solid black ;
+    border-radius: 50%;
+}
+input[type='radio']:checked{
+    background-color: var(--radio-color);
+}
+#babyPink{
+    --radio-color:rgb(249, 179, 192);
+}
+#lightgreen{
+    --radio-color:rgb(115, 240, 90);
+}
+#light{
+    --radio-color:rgb(188, 200, 122);
+}
+#dark{
+    --radio-color:rgb(249, 6, 50);
+}
+#orange{
+    --radio-color:rgb(233, 113, 34);
+}
+:root:has(#lightgreen:checked){
+    background-color: rgb(115, 240, 90);
+}
+:root:has(#light:checked){
+    background-color: rgb(188, 200, 122);
+}
+:root:has(#dark:checked){
+    background-color: rgb(249, 6, 50);
+}
+:root:has(#orange:checked){
+    background-color: rgb(233, 113, 34);
+}
+:root:has(#babyPink:checked){
+    background-color: rgb(249, 179, 192);
+}
+body{
+    background-color: var(--radio-color);
+}
